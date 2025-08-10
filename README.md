@@ -97,5 +97,5 @@ Bellevue University – DSC680 Applied Data Science
 ---
 
 ## 📜 License
-This project is licensed under the PAPM License**.
+This project is licensed under the **PAPM License**.
 
