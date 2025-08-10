@@ -1,42 +1,101 @@
-Call Volume Forecast Project
-📌 Project Overview
-This project aims to forecast daily call volumes for a call center by leveraging historical call data combined with reservation information and seasonal indicators. The goal is to build reliable time series models that capture how call volumes fluctuate over time and to understand the impact of reservations and special days on call center demand.
+# 📞 Call Volume Forecast Project
 
-📊 Dataset
+## 📌 Project Overview
+This project forecasts daily call volumes for a call center using historical call data, reservation trends, and seasonal indicators.  
+The goal is to build reliable time series models to understand call volume fluctuations and measure the impact of reservations and special days on demand.
 
-Sources:
-case_data_calls.csv: Daily call volume data
-case_data_reservations.csv: Reservation data with potential impact on call volumes
-Time Period: January 1, 2013 to February 29, 2016 (3+ years of daily data)
-Key Features:
-Date (day-month-year format)
-Calls received daily
-Reservation counts (total and 2 months in advance)
-Binary indicators for summer break, Christmas break, and special holidays
-Weekday encoded as both integer and name
-🎯 Objectives
-Clean and preprocess time series and related features
-Explore the relationships between call volumes, reservations, and seasonal patterns
-Perform time series forecasting of call volumes
-Evaluate model performance using metrics such as RMSE
-Analyze the influence of holidays and special days on call demand
-🧠 Models and Techniques Used
-Linear Regression
-Random Forest Regression
-Train-test splitting with time-aware partitioning
-Cross-validation to assess model stability
-Hypothesis testing to evaluate operational impacts
-📈 Performance Metrics
-Root Mean Squared Error (RMSE) for model accuracy
-Cross-validated RMSE to assess generalization
-T-test statistics to measure significance of differences in abandonment rates
-🔍 Key Findings
-Linear regression slightly outperformed random forest in forecasting call volumes
-Model performance varied significantly across different data folds, indicating possible seasonal or behavioral shifts
-Statistical testing confirmed significant differences in abandonment rates linked to call volume variations
-Reservations and holiday periods influence call demand, suggesting opportunities for improved staffing and resource planning
-📊 Visualizations Included
-Time series plots of call volume and reservation trends
-Correlation heatmaps between key variables
-Train-test split visualizations to ensure data integrity
-Model prediction vs actual call volume comparisons
+---
+
+## 📊 Dataset
+
+**Sources:**
+- `case_data_calls.csv` – Daily call volume data
+- `case_data_reservations.csv` – Reservation data with potential impact on call volumes
+
+**Time Period:**
+- January 1, 2013 – February 29, 2016 (3+ years of daily data)
+
+**Key Features:**
+- Date (day-month-year)
+- Calls received daily
+- Reservation counts (total and 2 months in advance)
+- Binary indicators for summer break, Christmas break, and special holidays
+- Weekday encoded as integer and name
+
+---
+
+## 🎯 Objectives
+- Clean and preprocess time series and related features
+- Explore relationships between call volumes, reservations, and seasonal patterns
+- Forecast daily call volumes
+- Evaluate performance using RMSE and cross-validation
+- Analyze holiday and special day impacts on call demand
+
+---
+
+## 🧠 Models & Techniques
+- Linear Regression
+- Random Forest Regression
+- Time-aware train-test splitting
+- Cross-validation for stability checks
+- Hypothesis testing to measure operational impacts
+
+---
+
+## 📈 Performance Metrics
+- **RMSE** – model accuracy
+- **Cross-validated RMSE** – generalization
+- **T-test** – significance of abandonment rate differences
+
+---
+
+## 🔍 Key Findings
+- Linear regression slightly outperformed random forest
+- Performance varied across folds — seasonal or behavioral shifts likely
+- Significant abandonment rate differences linked to call volume
+- Reservations and holidays strongly influence call demand
+
+---
+
+## 📊 Visualizations
+- Time series plots (calls vs. reservations)
+- Correlation heatmaps
+- Train-test split visualizations
+- Prediction vs. actual call volume plots
+
+---
+
+## 📂 Folder Structure
+call-volume-forecast/
+├── data/
+│ ├── case_data_calls.csv
+│ ├── case_data_reservations.csv
+├── notebooks/
+│ ├── call_volume_forecast_analysis.ipynb
+├── models/
+│ ├── saved_models.pkl
+├── outputs/
+│ ├── visuals/
+│ ├── metrics/
+├── README.md
+
+---
+
+## 🔮 Future Enhancements
+- Use **SARIMA** or **LSTM** for better time series modeling
+- Add peak hours, rolling averages, and lag features
+- Build automated forecasting pipeline
+- Deploy results in real-time dashboards
+
+---
+
+## 👤 Author
+**Pragathi Porawakara Arachchige**  
+📎 [GitHub Profile](https://github.com/PragathiM007)  
+Bellevue University – DSC680 Applied Data Science
+
+---
+
+## 📜 License
+This project is licensed under the PAPM License**.
+
